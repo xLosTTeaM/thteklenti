@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THT BBCode Editor</title>
+    <style>
+        @font-face {
+            font-family: 'roboto';
+            src: url('font/Roboto-Regular.woff2') format('woff2'), url('font/Roboto-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        html,
+        body {
+            background-color: #1e1e1e;
+            font-family: 'roboto', sans-serif !important;
+            color: #bfbfbf;
+            border: none;
+        }
+        
+        input[type="text"] {
+            background-color: transparent;
+            border: 1px solid #bfbfbf;
+            padding: 4px;
+            outline: none;
+            border-radius: 5px;
+            color: #bfbfbf;
+            transition: all 250ms ease-out;
+            width: 200px;
+        }
+        
+        input[type="text"]:Focus {
+            border-color: #00bfff;
+        }
+        
+        .container {
+            padding: 10px;
+            margin: auto;
+        }
+        
+        table {
+            border: 1px solid #00bfff;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        
+        table tr td {
+            padding: 5px;
+        }
+        
+        table tr td:first-child {
+            text-align: right;
+        }
+        
+        .shortcuts {
+            margin-top: 20px;
+            width: 324px;
+        }
+        
+        .buttonTd {
+            text-align: center !important;
+            padding: 10px;
+        }
+        
+        #kaydet {
+            border: 1px solid #00bfff;
+            background-color: transparent;
+            color: #00bfff;
+            padding: 5px 15px 5px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 250ms ease-out;
+            outline: none;
+        }
+        
+        #kaydet:Hover {
+            background-color: #00bfff;
+            color: #1e1e1e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>AYARLAR</h3>
+        <table class="settings">
+            <tr>
+                <td>
+                    Ayraç Adresi:
+                </td>
+                <td>
+                    <input id="ayrac" type="text" value="https://i.hizliresim.com/4dKDtQ.png">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Madde Şekli:
+                </td>
+                <td>
+                    <input id="madde" type="text" value="»">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Madde Rengi:
+                </td>
+                <td>
+                    <input id="madde_renk" type="text" value="#00bfff">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Başlık Rengi:
+                </td>
+                <td>
+                    <input id="baslik_renk" type="text" value="Red">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Vurgu Rengi:
+                </td>
+                <td>
+                    <input id="vurgu_renk" type="text" value="#00bfff">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Yazı Rengi:
+                </td>
+                <td>
+                    <input id="yazi_renk" type="text" value="White">
+                </td>
+            </tr>
+            <tr>
+                <td class="buttonTd" colspan="2">
+                    <button id="kaydet">Ayarları Kaydet</button>
+                </td>
+            </tr>
+        </table>
+
+        <h3>KISAYOLLAR</h3>
+        <table class="shortcuts">
+            <tr>
+                <td>
+                    Ayraç Ekleme:
+                </td>
+                <td>
+                    Ctrl + Shift + A
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Maddeleme:
+                </td>
+                <td>
+                    Ctrl + Shift + S
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Başlık Ekle:
+                </td>
+                <td>
+                    Ctrl + Shift + H
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Yazıyı Vurgula:
+                </td>
+                <td>
+                    Ctrl + Shift + F
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Renk Ekle:
+                </td>
+                <td>
+                    Ctrl + Shift + X
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="storage.js"></script>
+</body>
+
+</html>

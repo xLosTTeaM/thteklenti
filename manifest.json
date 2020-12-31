@@ -1,0 +1,29 @@
+{
+    "name": "THT BBcode Uzantısı",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "TurkHackTeam vBulletin BBCode Kısayolları.",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "index.html"
+    },
+    "icons": {
+        "16": "icon_16.png",
+        "48": "icon_48.png",
+        "128": "icon_128.png"
+    },
+    "permissions": [
+        "storage",
+        "tabs",
+        "bookmarks",
+        "http://turkhackteam.org/*",
+        "unlimitedStorage"
+    ],
+
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["script.js"],
+        "all_frames": true
+    }]
+
+}
