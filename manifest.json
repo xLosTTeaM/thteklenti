@@ -21,7 +21,7 @@
     ],
 
     "content_scripts": [{
-        "matches": ["<all_urls>"],
+        "matches": ["http://turkhackteam.org/*"],
         "js": ["script.js"],
         "all_frames": true
     }]
